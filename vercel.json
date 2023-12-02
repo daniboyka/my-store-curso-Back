@@ -1,0 +1,8 @@
+{
+  "rewhites":[
+    {
+      "source": "api/(.*)",
+      "destination": "/api"
+    }
+  ]
+}

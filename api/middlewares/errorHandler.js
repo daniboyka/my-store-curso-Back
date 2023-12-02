@@ -1,13 +1,12 @@
 //Creamos función que nos hará llegar a un middleware de tipo error:
 const logErrors = (err, req, res, next) => {
-  console.log('11111111');
   console.group(err); //mostrar el error en servidor para poder monitorearlo
   next(err); //importante para saber que se esta enviando a un middleware de tipo error, si no tiene el error dentro entonces se esta mandando a uno normal
 };
 
 // Crear formato para devolverlo al cliente que se complementa con la función anterior:
 const errorsHandler = (err, req, res, next) => {
-  console.log('22222'); // Crear formato para devolverlo al cliente que se complementa con la función anterior:
+  // Crear formato para devolverlo al cliente que se complementa con la función anterior:
   res.status(500).json({
     //indicar que el error es estatus 500 Internal Server Error
     message: err.message, //mostrar al cliente el mensaje de error
